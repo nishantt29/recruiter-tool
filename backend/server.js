@@ -1,7 +1,7 @@
-const dotenv = require('dotenv');
 const express = require('express');
+const dotenv = require('dotenv');
 dotenv.config();
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const cors = require('cors');
 const candidatesRoutes = require('./routes/candidatesRoutes');
 const { sequelize } = require('./models/candidate');
@@ -10,10 +10,13 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5002;
 
-app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin:"*"
+}));
+
 app.use(express.json());
 app.use(express.static('./build'));
+// app.use(bodyParser.json());
 
 const currentFilename = path.join(__dirname, 'server.js');
 const currentDirname = path.dirname(currentFilename);

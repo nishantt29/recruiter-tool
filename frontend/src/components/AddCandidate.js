@@ -55,7 +55,7 @@ function AddCandidate() {
   const handleAddCandidate = () => {
     if (validateForm()) {
       axios
-        .post("http://localhost:5002/candidates", formData)
+        .post("https://recruiter-tool.onrender.com/candidates", formData)
         .then((response) => {
           toast.success("Candidate added successfully");
           navigate("/");

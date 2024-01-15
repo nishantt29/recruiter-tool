@@ -3,7 +3,8 @@ const { Candidate } = require('../models/candidate');
 exports.getAllCandidates = async (req, res) => {
   try {
     const candidates = await Candidate.findAll();
-    res.json(candidates);
+    res.header("Content-Type", "application/json");
+    res.send(candidates);
   } catch (error) {
     console.error('Error fetching candidates:', error);
     res.status(500).json({ error: 'Internal Server Error' });

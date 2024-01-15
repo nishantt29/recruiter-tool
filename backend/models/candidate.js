@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 console.log(process.env.DB_URL,"process.env.DB_URL")
 const databaseUrl = process.env.DB_URL 
 // || 'postgres://developer:developer@localhost:5432/postgres'
+console.log("====>",databaseUrl)
 const sequelize = new Sequelize(databaseUrl,{
   dialect: 'postgres',
 });
