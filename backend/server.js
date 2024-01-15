@@ -22,8 +22,8 @@ const currentFilename = path.join(__dirname, 'server.js');
 const currentDirname = path.dirname(currentFilename);
 // console.log('currentDirname:', currentFilename);
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(currentDirname, 'build', 'index.html'));
+app.get(/^\/(?!candidates).*/, (req, res) => {
+  res.sendFile(path.resolve(__dirname,'build', 'index.html'));
 });
 
 app.use('/candidates', candidatesRoutes);
