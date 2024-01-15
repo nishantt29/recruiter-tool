@@ -1,0 +1,58 @@
+.div-conatainer {
+  max-width: 100%;
+  margin: 0 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  height: 40px;
+  width: max-content;
+}
+.add-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 40px;
+    width: max-content;
+}
+
+button:hover {
+  background-color: #45a049;
+}
